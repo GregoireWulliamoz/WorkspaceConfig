@@ -1,0 +1,14 @@
+[push]
+	autoSetupRemote = true
+[alias]
+	dev = !git checkout develop && git pull
+	main = !git checkout main && git pull
+	prev = checkout -
+	feat = !git checkout -b feature/$1 && :
+	fix = !git checkout -b hotfix/$1 && :
+	cfeat = !git add . && git commit -m "\"feat[$1]: $2\"" && :
+	cfix = !git add . && git commit -m "\"fix[$1]: $2\"" && :
+	amm = !git add . && git commit --amend
+	undo = reset --soft HEAD~
+	sta = !git add . && git stash
+	pop = stash pop
